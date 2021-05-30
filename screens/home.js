@@ -4,7 +4,8 @@ import { View} from 'react-native'
 import {Text,Icon,Button } from 'react-native-elements';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import Product from './product';
-import Orders from './orders'
+import Orders from './orders' ;
+import Category from './category' ;
 
 
 export default function Home() {
@@ -18,6 +19,11 @@ export default function Home() {
   //Move to order page
   function moveOrders(){
     navigation.navigate('Orders');
+  }
+
+  //Move to categories page
+  function moveCategories(){
+    navigation.navigate('Category');
   }
 
   return(
@@ -35,7 +41,7 @@ export default function Home() {
               <Text style ={{color:'white'}}>76 items</Text>
               <Icon style={{alignItems:'flex-end'}} size={80} name = 'archive' color = 'white'></Icon>
             </TouchableOpacity>
-            <TouchableOpacity style={{flex:8,backgroundColor:'#EF9630',padding:20,borderRadius:20,marginTop:10}}>
+            <TouchableOpacity style={{flex:8,backgroundColor:'#EF9630',padding:20,borderRadius:20,marginTop:10}} onPress={() => moveCategories()}>
               <Text h3 style={{color:'white'}}>Categories</Text>
               <Text style ={{color:'white'}}>12 items</Text>
               <Icon style={{alignItems:'flex-end'}} size={80} name = 'list' color = 'white'></Icon>
