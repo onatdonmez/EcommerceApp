@@ -28,4 +28,27 @@ export default function NewCategory() {
             })
 
     }
+
+    return (
+        
+        <View> 
+
+            <Input
+                placeholder='Category Name'
+                rightIcon={{ type: 'font-awesome', name: 'sort' }}
+                onChangeText={value => setCategoryName(value)}
+            />
+
+            <Input
+                placeholder='Description'
+                rightIcon={{ type: 'font-awesome', name: 'info-circle' }}
+                onChangeText={value => setDescription(value)}
+            />
+
+            <TouchableOpacity onPress={() => send()} style={{ flex: 1, backgroundColor: '#EF9630', textAlign: 'center', padding: 20, borderRadius: 20, marginTop: 10 }}
+                > SUBMIT
+            </TouchableOpacity>
+
+        </View>
+    )
 }
