@@ -42,8 +42,20 @@ export default function category() {
             })
     }
 
+    const navigation = useNavigation();
+
+
+    function moveNewCategory() {
+        navigation.navigate('NewCategory');
+    }
+
     return (
         <ScrollView style={{ flex: 1, padding: 20 }}>
+
+            <TouchableOpacity style={{ flex: 8, backgroundColor: '#EF9630', padding: 20, borderRadius: 20, marginTop: 10 }} onPress={() => moveNewCategory()}>
+                <Text style={{ color: 'white' }}>Add Category</Text>
+            </TouchableOpacity>
+
             {
                 categories.map((item) => (
                     <TouchableOpacity style={{ flex: 1, backgroundColor: '#EF9630', padding: 20, borderRadius: 20, marginTop: 10 }}>

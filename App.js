@@ -7,6 +7,7 @@ import Product from './screens/product'
 import ProductDetails from './screens/productdetails'
 import Orders from './screens/orders';
 import Category from './screens/category';
+import NewCategory from './screens/newcategory';
 
 
 
@@ -21,6 +22,7 @@ export default function App(){
         <Stack.Screen name='Product' component={Product} options={{headerShown:false}}/>
         <Stack.Screen name='ProductDetails' component={ProductDetails} options={{headerShown:false}}/>
         <Stack.Screen name='Category' component={Category} options={{headerShown:false}}/>
+        <Stack.Screen name='NewCategory' component={NewCategory} options={{headerShown:false}}/>
         <Stack.Screen name='Orders' component={Orders} options={{headerShown:false}}/>
       </Stack.Navigator>
     </NavigationContainer>
