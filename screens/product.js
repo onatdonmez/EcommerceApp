@@ -1,9 +1,8 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { TouchableOpacity, ScrollView } from 'react-native';
-import { View, Text} from 'react-native'
-import { Button, Icon } from 'react-native-elements'
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
-import ProductDetails from './productdetails';
+import { Text } from 'react-native'
+import { Icon } from 'react-native-elements'
+import { useNavigation } from '@react-navigation/native';
 import config from '../env/config'
 
 

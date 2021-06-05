@@ -1,4 +1,4 @@
-import { useRoute,useNavigation } from '@react-navigation/native';
+import { useRoute } from '@react-navigation/native';
 import React from 'react'
 import { ScrollView } from 'react-native';
 import { View, Text } from 'react-native'

@@ -1,11 +1,8 @@
-import React,{useState} from 'react'
-import { TouchableOpacity} from 'react-native';
-import { View} from 'react-native'
-import {Text,Icon,Button } from 'react-native-elements';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
-import Product from './product';
-import Orders from './orders' ;
-import Category from './category' ;
+import React from 'react'
+import {TouchableOpacity} from 'react-native';
+import {View} from 'react-native'
+import {Text,Icon} from 'react-native-elements';
+import { useNavigation } from '@react-navigation/native';
 
 
 export default function Home() {
@@ -38,17 +35,17 @@ export default function Home() {
       <View style={{flex:24}}>
             <TouchableOpacity style={{flex:8,backgroundColor:'#EF9630',padding:20,borderRadius:20,marginTop:10}} onPress={() => moveProducts()}>
               <Text h3 style={{color:'white'}}>Products</Text>
-              <Text style ={{color:'white'}}>76 items</Text>
+              <Text style ={{color:'white'}}>Name, Quantity, Price</Text>
               <Icon style={{alignItems:'flex-end'}} size={80} name = 'archive' color = 'white'></Icon>
             </TouchableOpacity>
             <TouchableOpacity style={{flex:8,backgroundColor:'#EF9630',padding:20,borderRadius:20,marginTop:10}} onPress={() => moveCategories()}>
               <Text h3 style={{color:'white'}}>Categories</Text>
-              <Text style ={{color:'white'}}>12 items</Text>
+              <Text style ={{color:'white'}}>Category ID, Name, Description</Text>
               <Icon style={{alignItems:'flex-end'}} size={80} name = 'list' color = 'white'></Icon>
             </TouchableOpacity>
             <TouchableOpacity style={{flex:8 ,backgroundColor:'#EF9630',padding:20,borderRadius:20,marginTop:10}} onPress={() => moveOrders()}>
               <Text h3 style={{color:'white'}}>Orders</Text>
-              <Text style ={{color:'white'}}>830 items</Text>
+              <Text style ={{color:'white'}}>Date, Employee ID, Customer ID, Orders ID</Text>
               <Icon style={{alignItems:'flex-end'}} size={80} name = 'shopping-cart' color = 'white'></Icon>
             </TouchableOpacity>
         </View>
